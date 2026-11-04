@@ -1,0 +1,16 @@
+Experiment 3(a)
+Title: To execute commands using command separators (;), pipes (|), and output redirection (>) in Linux.
+
+Steps / Commands Executed:
+date; w | cat > who.txt
+
+date; — Executes the date command to display the current system date and time directly on the screen.  
+w | cat > who.txt — Runs the w command (showing who is logged in and what they are doing), pipes (|) the output into cat, and redirects (>) the final output to save it inside who.txt.
+
+Verify/View the contents of the created file:
+cat who.txt
+```[span_2](start_span)[span_2](end_span)
+
+
+Result:
+The date command output was displayed on the screen, while the output of the w command was successfully redirected and stored in who.txt.  
