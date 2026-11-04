@@ -1,0 +1,27 @@
+Experiment 5(b)
+Title: Write a shell script that takes filenames as command line arguments & converts all of them to uppercase.  
+
+Steps to follow:
+Open the terminal in Ubuntu.  
+Create a shell script: nano upper.sh  
+Enter the following code:
+#!/bin/bash
+for file in "$@"
+do
+    mv "$file" "$(echo "$file" | tr '[:lower:]' '[:upper:]')"
+done
+```[span_3](start_span)[span_3](end_span)
+
+
+Save the file using Ctrl + O, press Enter, then Ctrl + X.  
+Give execute permission: chmod +x upper.sh  
+Create some sample files: touch apple.txt banana.txt  
+Execute the script by passing file names as command line arguments:
+./upper.sh apple.txt banana.txt  
+Check the result: ls 
+The file should now appear as: APPLE.TXT and BANANA.TXT  
+
+
+
+Result:
+Successfully created and executed a shell script that converts the given file names to uppercase.  
