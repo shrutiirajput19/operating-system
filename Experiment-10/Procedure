@@ -1,0 +1,34 @@
+Aim - 
+
+Steps-
+1. open ubuntu terminal.
+2. Create a file using nano expt10.c
+3. Paste the shell script into the editor
+  #include <stdio.h>
+#include <sys/wait.h>
+#include <unistd.h>
+
+int main() {
+    int pid;
+
+    printf("Parent PID: %d\n", getpid());
+    pid = fork();
+
+    if (pid < 0) {
+        printf("fork failed\n");
+    }
+    else if (pid == 0) {
+        printf("Child PID: %d\n", getpid());
+        printf("Child process is running\n");
+    }
+    else {
+        wait(NULL);
+        printf("Child process terminated\n");
+    }
+
+    return 0;
+}
+
+4. Press Ctrl+O and press ctrl+x to save and exit.
+5. Compile the program using gcc expt10.c -o expt10.
+6. Execute using ./expt10
