@@ -1,0 +1,103 @@
+* Basic Bash Commands
+
+### 1. `pwd` – Print Working Directory
+Displays the current directory path.
+
+* `pwd -L` – Displays the logical path including symbolic links
+* `pwd -P` – Displays the physical path resolves symbolic links
+* `pwd --help` – Displays help information
+
+---
+
+### 2. `ls` – List Directory Contents
+Lists files and directories in the current working directory.
+
+* `ls -l` – Displays detailed file information permissions size owner date
+* `ls -a` – Displays all files including hidden files starting with `.`
+* `ls -lt` – Displays detailed information sorted by modification time
+
+---
+
+### 3. `cd` – Change Directory
+Navigates between different directories.
+
+* `cd ..` – Moves up one level to the parent directory
+* `cd [directory_name]` – Changes directory to the specified path
+* `cd` or `cd ~` – Navigates directly to the user home directory
+
+---
+
+### 4. `mkdir` – Make Directory
+Creates new directories.
+
+* `mkdir [directory_name]` – Creates a single new directory
+* `mkdir -v [directory_name]` – Creates a directory and prints a message for each created directory
+* `mkdir -p [path/to/directory]` – Creates parent directories as needed if they do not exist
+* `mkdir -m [mode] [directory_name]` – Sets file permission bits mode upon creation
+
+---
+
+### 5. `rmdir` – Remove Empty Directory
+Removes empty directories from the filesystem.
+
+* `rmdir [directory_name]` – Removes an empty directory
+* `rmdir -v [directory_name]` – Displays a message for every directory processed
+* `rmdir -p [path]` – Removes the directory and its parent directories if they become empty
+
+---
+
+### 6. `rm` – Remove Files and Directories
+Deletes files or directories.
+
+* `rm [file_name]` – Deletes a specified file
+* `rm -i [file_name]` – Prompts for confirmation before deleting each file
+* `rm -r [directory_name]` – Recursively deletes a directory and all of its contents
+* `rm -f [file_name]` – Forces deletion without prompting or showing errors for non-existent files
+* `rm -rf [directory_name]` – Forcefully and recursively removes a directory and all its contents
+
+---
+
+### 7. `touch` – Create File / Update Timestamp
+Creates empty files or modifies existing file timestamps.
+
+* `touch [file_name]` – Creates a new empty file if it does not exist
+* `touch -a [file_name]` – Updates only the access time
+* `touch -m [file_name]` – Updates only the modification time
+
+---
+
+### 8. `cp` – Copy Files and Directories
+Copies files or directories from one location to another.
+
+* `cp [source] [destination]` – Copies a file to a specified destination
+* `cp -i [source] [destination]` – Prompts before overwriting an existing destination file
+* `cp -v [source] [destination]` – Displays verbose details while copying
+* `cp -r [source_dir] [dest_dir]` – Recursively copies a directory and its contents
+
+---
+
+### 9. `mv` – Move / Rename Files
+Moves or renames files and directories.
+
+* `mv [old_name] [new_name]` – Renames a file or directory
+* `mv [file_name] [destination_dir]` – Moves a file into a target directory
+* `mv -i [source] [destination]` – Prompts before overwriting an existing file
+* `mv -v [source] [destination]` – Displays verbose output during the operation
+
+---
+
+### 10. `head` – Output Beginning of Files
+Prints the first part of files.
+
+* `head [file_name]` – Displays the first 10 lines of a file by default
+* `head -n [number] [file_name]` – Displays the specified number of initial lines
+
+---
+
+### 11. `tail` – Output Ending of Files
+Prints the last part of files.
+
+* `tail [file_name]` – Displays the last 10 lines of a file by default
+* `tail -n [number] [file_name]` – Displays the specified number of trailing lines
+* `tail -f [file_name]` – Monitors and streams real-time updates as the file grows
+*
