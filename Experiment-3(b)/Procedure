@@ -1,0 +1,33 @@
+Experiment 3(b)
+Title: Use sed command to swap the first and second words of each line in a file.  
+
+sed -i 's/^\([^ ]*\) \([^ ]*\)/\2 \1/' name.txt
+```[span_1](start_span)[span_1](end_span)
+
+---
+
+### **Explanation:**
+* `sed` - Stream editor used to modify text[span_2](start_span)[span_2](end_span)
+* `-i` - Modifies the file directly[span_3](start_span)[span_3](end_span)
+* `^` - Indicates the beginning of a line[span_4](start_span)[span_4](end_span)
+* `\([^ ]*\)` - Matches and stores the first word[span_5](start_span)[span_5](end_span)
+* `\([^ ]*\)` - Matches and stores the second word[span_6](start_span)[span_6](end_span)
+* `\2 \1` - Reverses their order, putting the second part first[span_7](start_span)[span_7](end_span)
+* `name.txt` - Input text file[span_8](start_span)[span_8](end_span)
+
+---
+
+### **Procedure:**
+
+1. **Open the terminal**[span_9](start_span)[span_9](end_span).
+2. **Create a file named `name.txt`** using the `cat` command and enter the names[span_10](start_span)[span_10](end_span).
+3. **Press `Ctrl + D`** to save the file and return to the terminal[span_11](start_span)[span_11](end_span).
+4. **Use the following `sed` command** to interchange the first & last names:  
+   `sed -i 's/^\([^ ]*\) \([^ ]*\)/\2 \1/' name.txt`[span_12](start_span)[span_12](end_span)
+5. **Display the modified file** using: `cat name.txt`[span_13](start_span)[span_13](end_span)
+6. **Observe that** the first and last names have been interchanged[span_14](start_span)[span_14](end_span).
+
+---
+
+### **Result:**
+The first & last names were successfully interchanged using the `sed` command[span_15](start_span)[span_15](end_span).
